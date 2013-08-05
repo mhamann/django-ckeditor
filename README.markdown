@@ -18,33 +18,32 @@ Install the package with [pip][] and [Mercurial][] or [git][]:
 
 Add `ckeditor` to your `INSTALLED_APPS`.
 
-Add a `CKEDITOR_CONFIGS` variable to your `settings.py` with at least a
-`default` config:
+Optionally, add a `CKEDITOR_CONFIG_URL` variable to your `settings.py` pointing to a .js file containing any CKEDITOR configurations you want to use.
 
-    CKEDITOR_CONFIGS = {
-        'default': {
-            'toolbar': [
-                [      'Undo', 'Redo',
-                  '-', 'Bold', 'Italic', 'Underline',
-                  '-', 'Link', 'Unlink', 'Anchor',
-                  '-', 'Format',
-                  '-', 'SpellChecker', 'Scayt',
-                  '-', 'Maximize',
-                ],
-                [      'HorizontalRule',
-                  '-', 'Table',
-                  '-', 'BulletedList', 'NumberedList',
-                  '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
-                  '-', 'SpecialChar',
-                  '-', 'Source',
-                  '-', 'About',
-                ]
-            ],
-            'width': 840,
-            'height': 300,
-            'toolbarCanCollapse': False,
-        }
-    }
+For example:
+
+    window.ckeditor_config = { 
+		'default': {
+	        'toolbar': [
+	            [      'Undo', 'Redo',
+	              '-', 'Bold', 'Italic', 'Underline',
+	              '-', 'Link', 'Unlink', 'Anchor',
+	              '-', 'Format',
+	              '-', 'SpellChecker', 'Scayt',
+	              '-', 'Maximize',
+	            ],
+	            [      'HorizontalRule',
+	              '-', 'Table',
+	              '-', 'BulletedList', 'NumberedList',
+	              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
+	              '-', 'SpecialChar',
+	              '-', 'Source',
+	              '-', 'About',
+	            ]
+	        ],
+	        'toolbarCanCollapse': false,
+	    }
+	}
 
 Collect the static files:
 
@@ -85,33 +84,39 @@ Sometimes it's nice to be able to configure each CKEditor widget separately.
 For example, you may want one field to have all the buttons on the toolbar,
 but another field to only show bold/italic/underline buttons.
 
-To do this, add additional configurations to your `CKEDITOR_CONFIGS` setting
+To do this, add additional configurations to your `CKEDITOR_CONFIG_URL` file
 like this:
 
-    CKEDITOR_CONFIGS = {
-        'default': {
-            'toolbar': [
-                [      'Undo', 'Redo',
-                  '-', 'Bold', 'Italic', 'Underline',
-                  '-', 'Link', 'Unlink', 'Anchor',
-                  '-', 'Format',
-                  '-', 'SpellChecker', 'Scayt',
-                  '-', 'Maximize',
-                ],
-            ],
-            'width': 840,
-            'height': 300,
-            'toolbarCanCollapse': False,
-        },
-        
-        'simple_toolbar': {
+	window.ckeditor_config = { 
+		'default': {
+	        'toolbar': [
+	            [      'Undo', 'Redo',
+	              '-', 'Bold', 'Italic', 'Underline',
+	              '-', 'Link', 'Unlink', 'Anchor',
+	              '-', 'Format',
+	              '-', 'SpellChecker', 'Scayt',
+	              '-', 'Maximize',
+	            ],
+	            [      'HorizontalRule',
+	              '-', 'Table',
+	              '-', 'BulletedList', 'NumberedList',
+	              '-', 'Cut','Copy','Paste','PasteText','PasteFromWord',
+	              '-', 'SpecialChar',
+	              '-', 'Source',
+	              '-', 'About',
+	            ]
+	        ],
+	        'toolbarCanCollapse': false,
+	   },
+	   
+	   'simple_toolbar': {
             'toolbar': [
                 [ 'Bold', 'Italic', 'Underline' ],
             ],
             'width': 840,
             'height': 300,
-        },
-    }
+        }
+	}
 
 When setting up the `CKEditor` widget in your `Form` class you can pass a
 `ckeditor_config` keyword argument to specify the config to use:
