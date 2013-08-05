@@ -19,12 +19,12 @@ else:
 
 setup(
     name='django-ckeditor',
-    version='0.9.5',
+    version='0.9.6',
     install_requires=install_requires,
     description=description,
     long_description=long_description,
-    author='Dumbwaiter Design',
-    author_email='dev@dwaiter.com',
-    url='http://bitbucket.org/dwaiter/django-ckeditor/',
+    author='Matt Hamann',
+    author_email='matt@mhamann.com',
+    url='http://github.com/mhamann/django-ckeditor/',
     packages=['ckeditor'],
 )
