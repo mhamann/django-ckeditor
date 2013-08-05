@@ -17,7 +17,7 @@ MEDIA = getattr(settings, 'CKEDITOR_MEDIA_URL',
                 '%s' % settings.STATIC_URL.rstrip('/')).rstrip('/')
 
 _CSS_FILE = 'grappelli.css' if GRAPPELLI_PRESENT else 'standard.css'
-_CONFIG_FILE = '/ckeditor/js/config.js' if getattr(settings, 'CKEDITOR_CONFIG_FILE', '') == '' else settings.CKEDITOR_CONFIG_FILE
+_CONFIG_FILE = '/ckeditor/js/config.js' if getattr(settings, 'CKEDITOR_CONFIG_URL', '') == '' else settings.CKEDITOR_CONFIG_URL
 
 class CKEditor(forms.Textarea):
     def __init__(self, *args, **kwargs):
