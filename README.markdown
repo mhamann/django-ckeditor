@@ -8,9 +8,7 @@ fields.
 
 Build Status
 ------------
-
-.. image:: https://travis-ci.org/mhamann/django-ckeditor.png?branch=master
-        :target: https://travis-ci.org/mhamann/django-ckeditor
+[![Build Status](https://travis-ci.org/mhamann/django-ckeditor.png)](https://travis-ci.org/mhamann/django-ckeditor)
 
 Setup
 -----
