@@ -6,6 +6,10 @@ fields.
 
 [CKEditor]: http://ckeditor.com/
 
+Build Status
+------------
+[![Build Status](https://travis-ci.org/mhamann/django-ckeditor.png)](https://travis-ci.org/mhamann/django-ckeditor)
+
 Setup
 -----
 
