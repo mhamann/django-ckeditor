@@ -9,7 +9,7 @@ fields.
 Setup
 -----
 
-Install the package with [pip][] and [Mercurial][] or [git][]:
+Install the package with [pip][] and [git][]:
     
     pip install -e git://github.com/mhamann/django-ckeditor.git#egg=django-ckeditor
 
