@@ -1,14 +1,16 @@
 django-ckeditor
 ===============
 
-`django-ckeditor` makes it easy to use [CKEditor][] with your Django 1.3+ text
+`django-ckeditor` makes it easy to use [CKEditor][] with your Django 1.6+ text
 fields.
 
 [CKEditor]: http://ckeditor.com/
 
+<!---
 Build Status
 ------------
 [![Build Status](https://travis-ci.org/mhamann/django-ckeditor.png)](https://travis-ci.org/mhamann/django-ckeditor)
+-->
 
 Setup
 -----
